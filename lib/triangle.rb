@@ -12,6 +12,8 @@ class Triangle
       :equilateral
     when 2
       :isosceles
+    when 3
+      :scalene
   end
 
   end
