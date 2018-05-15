@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if @sides.any? {|side| side > 0}
+    if @sides.any? {|side| side > 0} && valid?
       case @sides.uniq.length
       when 1
         :equilateral
