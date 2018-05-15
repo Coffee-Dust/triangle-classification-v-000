@@ -7,7 +7,7 @@ class Triangle
   end
 
   def kind
-    if @sides.any? {|side| side > 0} && valid?
+    if @sides.any? {|side| side > 0} && is_valid?
       case @sides.uniq.length
       when 1
         :equilateral
@@ -22,7 +22,7 @@ class Triangle
   end
 
   private
-  def valid?
+  def is_valid?
     sums = @sides.combination(2).collect {|a, b| a + b}
     sums.collect {|sum| @sides.all? {|side| sum > side } }.all? {|e| e == true}
   end
