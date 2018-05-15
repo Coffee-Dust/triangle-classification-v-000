@@ -7,6 +7,11 @@ class Triangle
   end
 
   def kind
+    if @sides.any? {|side| side > 0}
+
+    else
+
+    end
     case @sides.uniq.length
     when 1
       :equilateral
@@ -14,6 +19,7 @@ class Triangle
       :isosceles
     when 3
       :scalene
+      
   end
 
   end
