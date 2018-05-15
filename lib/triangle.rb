@@ -22,7 +22,8 @@ class Triangle
     end
   end
 
-  def valid?(sides)
+  private
+  def valid?
     sums = sides.combination(2).collect {|a, b| a + b}
     sums.collect {|sum| sides.all? {|side| sum > side } }.all? {|e| e == true}
   end
