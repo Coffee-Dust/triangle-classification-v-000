@@ -20,7 +20,11 @@ class Triangle
     else
       raise TriangleError
     end
+  end
 
+  def valid?(sides)
+    sums = sides.combination(2).collect {|a, b| a + b}
+    sums.collect {|sum| sides.all? {|side| sum > side } }.all? {|e| e == true}
   end
 
   class TriangleError < StandardError
