@@ -2,6 +2,7 @@ class Triangle
   # write code here
   attr_accessor :sides
   def initialize(length1, length2, length3)
+    @sides = []
     @sides << [length1, length2, length3]
     @sides.flatten!
   end
