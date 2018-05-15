@@ -8,19 +8,17 @@ class Triangle
 
   def kind
     if @sides.any? {|side| side > 0}
-
+      case @sides.uniq.length
+      when 1
+        :equilateral
+      when 2
+        :isosceles
+      when 3
+        :scalene
+    end
     else
 
     end
-    case @sides.uniq.length
-    when 1
-      :equilateral
-    when 2
-      :isosceles
-    when 3
-      :scalene
-      
-  end
 
   end
 
